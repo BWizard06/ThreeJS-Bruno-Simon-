@@ -5,11 +5,14 @@ import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import * as dat from "lil-gui";
 
+console.log("ok");
+
+
 /**
  * Base
  */
 // Debug
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -26,8 +29,8 @@ const scene = new THREE.Scene();
  */
 const textureLoader = new THREE.TextureLoader();
 const textMatcap = textureLoader.load("/textures/matcaps/12.png");
-const donutMatcap = textureLoader.load("/textures/matcaps/10.png");
-const torusKnotMatcap = textureLoader.load("/textures/matcaps/11.png");
+const donutMatcap = textureLoader.load("/textures/matcaps/11.png");
+const torusKnotMatcap = textureLoader.load("/textures/matcaps/10.png");
 
 /**
  * Fonts
@@ -37,7 +40,7 @@ const fontLoader = new FontLoader();
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   const textGeometry = new TextGeometry("B Wizard", {
     font: font,
-    size: 1.3,
+    size: 1.7,
     height: 0.7,
     curveSegments: 5,
     bevelEnabled: true,
@@ -65,13 +68,13 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   const torusKnotGeometry = new THREE.TorusKnotGeometry(0.8, 0.3)
   const torusKnotMaterial = new THREE.MeshMatcapMaterial({ matcap: torusKnotMatcap });
 
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 300; i++) {
     //Donut
     const donut = new THREE.Mesh(donutGeometry, donutMaterial);
 
-    donut.position.x = (Math.random() - 0.5) * 15;
-    donut.position.y = (Math.random() - 0.5) * 15;
-    donut.position.z = (Math.random() - 0.5) * 15;
+    donut.position.x = (Math.random() - 0.5) * 30;
+    donut.position.y = (Math.random() - 0.5) * 30;
+    donut.position.z = (Math.random() - 0.5) * 30;
 
     donut.rotation.x = Math.random() * Math.PI;
     donut.rotation.y = Math.random() * Math.PI;
@@ -84,9 +87,9 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     //Torusknot 
     const torusKnot = new THREE.Mesh(torusKnotGeometry, torusKnotMaterial)
     
-    torusKnot.position.x = (Math.random() - 0.5) * 15;
-    torusKnot.position.y = (Math.random() - 0.5) * 15;
-    torusKnot.position.z = (Math.random() - 0.5) * 15;
+    torusKnot.position.x = (Math.random() - 0.5) * 30;
+    torusKnot.position.y = (Math.random() - 0.5) * 30;
+    torusKnot.position.z = (Math.random() - 0.5) * 30;
     
     torusKnot.rotation.x = Math.random() * Math.PI;
     torusKnot.rotation.y = Math.random() * Math.PI;
@@ -141,7 +144,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.x = 1;
 camera.position.y = 1;
-camera.position.z = 3.5;
+camera.position.z = 4.5;
 scene.add(camera);
 
 // Controls
