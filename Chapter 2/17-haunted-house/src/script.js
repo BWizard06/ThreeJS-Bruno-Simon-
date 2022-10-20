@@ -1,14 +1,12 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import * as dat from 'lil-gui'
 import { Group, PCFSoftShadowMap } from 'three'
 
 /**
  * Base
  */
-// Debug
-const gui = new dat.GUI()
+
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -145,7 +143,7 @@ const graves = new THREE.Group()
 scene.add(graves)
 
 const graveGeometry = new THREE.BoxGeometry(0.6, 0.8, 0.2)
-const graveMaterial = new THREE.MeshStandardMaterial({color: 0xb2b6b1})
+const graveMaterial = new THREE.MeshStandardMaterial({color: 0x444444})
 
 for(let i = 0; i < 50; i++){
     const angle = Math.random() * Math.PI * 2
@@ -184,20 +182,15 @@ scene.add(floor)
  */
 // Ambient light
 const ambientLight = new THREE.AmbientLight(0xb9d5ff, 0.12)
-gui.add(ambientLight, 'intensity').min(0).max(1).step(0.001)
 scene.add(ambientLight)
 
 // Directional light
 const moonLight = new THREE.DirectionalLight(0xb9d5ff, 0.12)
 moonLight.position.set(4, 5, - 2)
-gui.add(moonLight, 'intensity').min(0).max(1).step(0.001)
-gui.add(moonLight.position, 'x').min(- 5).max(5).step(0.001)
-gui.add(moonLight.position, 'y').min(- 5).max(5).step(0.001)
-gui.add(moonLight.position, 'z').min(- 5).max(5).step(0.001)
 scene.add(moonLight)
 
 // Doorlight
-const doorLight = new THREE.PointLight(0xff7d46, 1, 7)
+const doorLight = new THREE.PointLight(0xFC1727, 1, 7, 3)
 doorLight.position.set(0, 2.2, 2.7)
 house.add(doorLight)
 
