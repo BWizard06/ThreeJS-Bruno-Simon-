@@ -1,0 +1,19 @@
+{
+  "name": "21-scroll-based-animation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.2.3"
+  },
+  "dependencies": {
+    "gsap": "^3.5.1",
+    "lil-gui": "^0.17.0",
+    "three": "^0.146.0"
+  }
+}
