@@ -225,6 +225,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
  */
 let objectsToUpdate = [];
 
+
 // Sphere
 const sphereGeometry = new THREE.SphereGeometry(1, 20, 20);
 const sphereMaterial = new THREE.MeshStandardMaterial({
