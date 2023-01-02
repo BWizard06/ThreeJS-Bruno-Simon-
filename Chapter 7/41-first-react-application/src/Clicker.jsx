@@ -7,6 +7,7 @@ export default function Clicker({ increment, keyName, color = "cyan" }) {
   
   // Second parameter is empty of useEffect, so it the function only renders on the first render
   useEffect(() => {
+	
 	buttonRef.current.style.backgroundColor = 'papayawhip'
 	buttonRef.current.style.color = 'salmon'
 
