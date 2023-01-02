@@ -10,5 +10,6 @@ root.render(
 			<h1>My First React App</h1>
 			<h2>Hello Mate</h2>
 		</App>
+		
 	</div>
 )
