@@ -2,7 +2,7 @@
 
 ## Description / Motivation
 Repository to the [ThreeJS Course](https://threejs-journey.com/) by Bruno Simon <br />
-ThreeJS is a Javascript library which allows you to make 3D experiences in the web with Native Javascript<br />
+[ThreeJS](https://threejs.org/) is a Javascript library which allows you to make 3D experiences in the web with Native Javascript<br />
 I love creating 3D experiences, that's why this course was absolutely perfect for me
 
 ## Prerequisites
