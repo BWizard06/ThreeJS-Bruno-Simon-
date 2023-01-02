@@ -30,7 +30,7 @@ export default function App({ clickersCount, children }) {
 
   return <>
       {children}
-      
+
       <p>Total Count: {count}</p>
 
       <button onClick={changeVisible}>
@@ -51,3 +51,5 @@ export default function App({ clickersCount, children }) {
       <People />
   </> 
 }
+
+

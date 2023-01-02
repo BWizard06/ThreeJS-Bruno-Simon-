@@ -5,7 +5,7 @@ export default function People(){
     const [people, setPeople ] = useState([])
 
     const getPeople = async () => {
-        
+
         const response = await fetch('https://jsonplaceholder.typicode.com/users')
         const data = await response.json()
 
@@ -28,3 +28,4 @@ export default function People(){
         </ul>
     </div>
 }
+
